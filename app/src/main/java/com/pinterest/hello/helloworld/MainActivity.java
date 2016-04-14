@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void gameOver() {
         // end the game
+        _timer.cancel();
         _textView.setText("Game over");
         Intent intent = new Intent(this, GameOverActivity.class);
         intent.putExtra("score", _score);
